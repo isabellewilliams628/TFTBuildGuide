@@ -1,0 +1,20 @@
+.TopCard{
+    background-color: #EDC8E5 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 35vh;
+}
+
+.TopCardText{
+    display: flex;
+    font-family: 'Inter';
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: antiquewhite;
+   
+}
+
+.TopCardImage{}
