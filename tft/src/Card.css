@@ -1,0 +1,23 @@
+.Card{
+    background-color: #EDC8E5 ;
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    justify-content: center;
+}
+
+.CardText{
+    display: flex;
+    font-family: Friz-Quadrata-Std-Medium;
+    justify-content: center;
+    align-items: top;
+    margin-top: 50px;
+    font-size: 70px;
+    font-weight: bolder;
+    color: #FEE99B;
+   
+}
+
+.imageOne{
+ 
+}

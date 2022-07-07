@@ -1,10 +1,14 @@
-
+import { Link } from "react-router-dom";
 import './App.css';
-import TopCard from './TopCard';
+import Card from './Card';
+import NavBar from './NavBar';
+
 function App() {
   return (
     <div className="App">
-    <TopCard />
+    <NavBar />
+    <Card />
+    
     </div>
   );
 }
