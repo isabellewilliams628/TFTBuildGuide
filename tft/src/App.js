@@ -1,7 +1,7 @@
 import './App.css';
 import Card from './Card.js';
 import TierList from './TierList.js'
-
+import Account from './Account.js'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -12,6 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Card />} />
       <Route path="tierlist" element={<TierList />} />
+      <Route path="account" element={<Account />} />
     </Routes>
     </BrowserRouter>
     </div>

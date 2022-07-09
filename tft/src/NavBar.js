@@ -1,34 +1,42 @@
 import './NavBar.css';
 import {Link} from "react-router-dom";
+import icon from "./assets/icon.png"
 
 function NavBar() {
     return (
       <div className="NavBar">
-        <Link to="/">
-            <div className="Home">
-                <div className="HomeText">Home</div>
+        <Link to="/account" >
+            <div className="Account">
+                <img src={icon} className="AccountIcon"></img>
             </div>
         </Link>
-            <div className="Builds">
-                <div className="BuildsText">Builds</div>
+        <Link to="/">
+            <div className="Button">
+                <div className="Text">Home</div>
             </div>
-            <div className="Items">
-                <div className="ItemsText">Items</div>
+        </Link>
+            <div className="Button">
+                <div className="Text">Builds</div>
             </div>
-            <div className="Augments">
-                <div className="AugmentsText">Augments</div>
+        <Link to="/items">
+            <div className="Button">
+                <div className="Text">Items</div>
             </div>
-            <Link to="/tierlist">
-            <div className="TierList">
-                <div className="TierList">Tier List</div>
+        </Link>
+        <Link to="/augments">
+            <div className="Button">
+                <div className="Text">Augments</div>
             </div>
-            </Link>
-            <div className="Feedback">
-                <div className="FeedbackText">Feedback</div>
+        </Link>
+        <Link to="/tierlist">
+            <div className="Button">
+                <div className="Text">Tier List</div>
             </div>
-            <div className="Profile">
-                <div className="ProfileIcon"></div>
+         </Link>
+            <div className="Button">
+                <div className="Text">Feedback</div>
             </div>
+        
       </div>
     );
   }

@@ -1,6 +1,6 @@
 .NavBar{
     
-    height: 80px;
+    height: 60px;
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -9,115 +9,29 @@
 }
 
 
-.Home{
+.Button{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 100px;
     height: 50px;
-    margin-left: 30px;
+    margin-right: 80px;
 }
 
-.HomeText{
-    font-size: 20px;
+.Text{
+    font-size: 17px;
     font-family: Friz-Quadrata-Std-Medium;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.HomeText:hover{
+.Text:hover{
     color: #FEE99B;
     cursor: pointer;
 }
 
-.Builds{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
+.AccountIcon{
+    height: 30px;
+    width: 30px;
+    margin-left: 40px;
 }
-
-.BuildsText{
-    font-size: 20px;
-    font-family: Friz-Quadrata-Std-Medium;
-    font-weight: bold;
-}
-
-.BuildsText:hover{
-    color: #FEE99B;
-    cursor: pointer;
-}
-
-.Items{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-}
-
-.ItemsText{
-    font-size: 20px;
-    font-family: Friz-Quadrata-Std-Medium;
-    font-weight: bold;
-}
-
-.ItemsText:hover{
-    color: #FEE99B;
-    cursor: pointer;
-}
-
-.Augments{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-}
-
-.AugmentsText{
-    font-size: 20px;
-    font-family: Friz-Quadrata-Std-Medium;
-    font-weight: bold;
-}
-
-.AugmentsText:hover{
-    color: #FEE99B;
-    cursor: pointer;
-}
-
-.Feedback{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-    
-}
-
-.FeedbackText{
-    font-size: 20px;
-    font-family: Friz-Quadrata-Std-Medium;
-    font-weight: bold;
-}
-
-.FeedbackText:hover{
-    color: #FEE99B;
-    cursor: pointer;
-}
-
-.Profile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-  
-}
-

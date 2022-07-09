@@ -1,5 +1,5 @@
 .Card{
-    background-color: #EDC8E5 ;
+    background-color: #EDDDFF ;
     display: flex;
     width: 100vw;
     height: 90vh;
@@ -15,7 +15,7 @@
     margin-top: 20px;
     font-size: 70px;
     font-weight: bolder;
-    color: #FEE99B;
+    color: black;
    
 }
 
