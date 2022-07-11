@@ -7,7 +7,7 @@ function Card() {
       <div>
         <NavBar />
       <div className="Card">
-        <div className="CardText">TEAMFIGHT TACTICS GUIDE</div>
+        <div className="CardText">Teamfight Tactics Guide</div>
         <div className="Images">
         <img src={pengu} className="imageOne"></img>
       <img className="imageTwo"></img>

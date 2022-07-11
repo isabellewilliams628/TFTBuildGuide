@@ -2,9 +2,10 @@
     background-color: #EDDDFF ;
     display: flex;
     width: 100vw;
-    height: 90vh;
+    height: 94vh;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 .CardText{
@@ -12,14 +13,15 @@
     font-family: Friz-Quadrata-Std-Medium;
     justify-content: center;
     align-items: top;
-    margin-top: 20px;
     font-size: 70px;
-    font-weight: bolder;
-    color: black;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: white;
    
 }
 
 .imageOne{
+    margin-top: 50px;
     width: 20vw;
     height: 20vw;
 }
