@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import './Registration.css'
+import NavBar from './NavBar';
 
 function Registration(){
 return(
+
+    
         <div className="form">
             <div className="form-body">
                 <div className="email">
