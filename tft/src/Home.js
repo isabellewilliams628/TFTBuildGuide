@@ -1,13 +1,13 @@
-import './Card.css';
+import './Home.css';
 import pengu from './assets/pengu.png'
 import NavBar from './NavBar';
 
-function Card() {
+function Home() {
     return (
       <div>
         <NavBar />
-      <div className="Card">
-        <div className="CardText">Teamfight Tactics Guide</div>
+      <div className="Home">
+        <div className="HomeText">Teamfight Tactics Guide</div>
         <div className="Images">
         <img src={pengu} className="imageOne"></img>
       <img className="imageTwo"></img>
@@ -17,4 +17,4 @@ function Card() {
     );
   }
   
-  export default Card;
+  export default Home;

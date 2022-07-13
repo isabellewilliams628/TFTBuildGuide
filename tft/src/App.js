@@ -1,9 +1,10 @@
 import './App.css';
-import Card from './Card.js';
+import Home from './Home.js';
 import TierList from './TierList.js'
 import Account from './Account.js'
 import Items from './Items.js'
-import Registration from './Registration';
+import Registration from './Registration.js';
+import Login from './login.js'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -12,11 +13,11 @@ function App() {
     <div className="App">
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Card />} />
+      <Route path="/" element={<Home />} />
       <Route path="items" element={<Items />} />
       <Route path="tierlist" element={<TierList />} />
-
-      <Route path="account" element={<Registration />} />
+      <Route path="login" element={<Login />} />
+      <Route path="registration" element={<Registration />} />
     </Routes>
     </BrowserRouter>
     </div>

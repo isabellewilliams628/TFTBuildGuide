@@ -1,4 +1,4 @@
-.Card{
+.Home{
     background-color: #EDDDFF ;
     display: flex;
     width: 100vw;
@@ -8,7 +8,7 @@
     
 }
 
-.CardText{
+.HomeText{
     display: flex;
     font-family: Friz-Quadrata-Std-Medium;
     justify-content: center;

@@ -32,6 +32,7 @@ function TierList() {
                     <div className="ButtonText">AUGMENTS</div>
                 </div>
             </div>
+
             { buttonSelect == 0 ? <TierBox list={comps}/> :  buttonSelect == 1 ? <TierBox list={champs}/> :  buttonSelect == 2 ? <TierBox list={items}/>  : <TierBox list={augments}/> };
             
         </div>
