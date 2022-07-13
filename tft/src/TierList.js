@@ -2,15 +2,11 @@ import React, { useState } from 'react'
 import NavBar from './NavBar.js'
 import TierBox from './TierBox.js'
 import './TierList.css'
-import pic1 from './assets/s1.png'
-import pic2 from './assets/s2.png'
-import pic3 from './assets/s3.png'
-import pic4 from './assets/s4.png'
-import pic5 from './assets/s5.png'
+
 function TierList() {
    
     const [buttonSelect, setButtonSelect] = useState(0);
-    const comps=["Bruiser Swift Shots"]
+    const comps=["sc1", "sc2", "sc3", "sc4", "sc5", "sc6"]
     const champs=["Karma"]
     const items=["Recurve Bow"]
     const augments=["Revel Crown"]

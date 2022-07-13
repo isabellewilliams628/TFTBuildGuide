@@ -15,8 +15,7 @@ function App() {
       <Route path="/" element={<Card />} />
       <Route path="items" element={<Items />} />
       <Route path="tierlist" element={<TierList />} />
-
-      <Route path="account" element={<Registration />} />
+      <Route path="account" element={<Account />} />
     </Routes>
     </BrowserRouter>
     </div>
