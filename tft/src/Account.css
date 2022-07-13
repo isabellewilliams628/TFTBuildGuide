@@ -1,0 +1,59 @@
+.AccountPage{
+    display: flex;
+}
+
+.TopHalf{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: flex;
+    width: 100%;
+    height: 40vh;
+}
+
+.ProfilePicture{
+   margin-left: 40px;
+}
+
+.Username{
+    margin-left: 30vw;
+    font-size: 30px;
+}
+
+.BottomHalf{
+    display: flex;
+    background-color: #EDDDFF;
+    width: 100%;
+    height: 70vh;
+}
+
+.RightHalf{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LeftHalf{
+
+}
+
+.FavBuildsBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    width: 14vw;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.FavBuildsBarText{
+    font-size: 30px;
+
+}
+
+.FavBuilds{
+
+}
+
