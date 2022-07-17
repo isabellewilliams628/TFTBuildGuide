@@ -15,16 +15,16 @@ function TierList() {
         <div className="TierList">
             <NavBar />
             <div className="TopBar">
-                <div onClick={() => {setButtonSelect(0)}} className="TypeButton">
+                <div onClick={() => {setButtonSelect(0)}} className={buttonSelect == 0 ? "SelectedButton" : "TypeButton"}>
                     <div className="ButtonText">COMPS</div>
                 </div>
-                <div onClick={() => {setButtonSelect(1)}} className="TypeButton">
+                <div onClick={() => {setButtonSelect(1)}} className={buttonSelect == 1 ? "SelectedButton" : "TypeButton"}>
                     <div className="ButtonText">CHAMPS</div>
                 </div>
-                <div onClick={() => {setButtonSelect(2)}} className="TypeButton"> 
+                <div onClick={() => {setButtonSelect(2)}} className={buttonSelect == 2 ? "SelectedButton" : "TypeButton"}> 
                     <div className="ButtonText">ITEMS</div>
                 </div>
-                <div onClick={() => {setButtonSelect(3)}} className="TypeButton"> 
+                <div onClick={() => {setButtonSelect(3)}} className={buttonSelect == 3 ? "SelectedButton" : "TypeButton"}> 
                     <div className="ButtonText">AUGMENTS</div>
                 </div>
             </div>

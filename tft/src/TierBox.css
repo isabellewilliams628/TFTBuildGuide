@@ -1,7 +1,7 @@
 .TierBox{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: center; 
     
    
 }
@@ -11,7 +11,8 @@
     width: 10vw;
     height: 80vh;
     flex-direction: column;
-    margin-left: 130px;
+    margin-left: 200px;
+   
 
 }
 
@@ -23,6 +24,8 @@
     height: 12vh;
     background-color: #EDDDFF;
     margin-top: 20px;
+    font-size: 40px;
+    font-family: Friz-Quadrata-Std-Medium;
 }
 
 .Ranks{
@@ -31,17 +34,17 @@
     align-items: center;
     flex-direction: column;
     background-color: #EDDDFF;
-    width: 52vw;
-    height: 70vh;
-    margin-top: 20px;
-    margin-right: 110px;
+    width: 80vw;
+    height: 68vh;
+    margin-right: 400px;
+    margin-bottom: 70px;
 }
 
 .RankList{
     display: flex;
     justify-content: space-between;
     align-items: space-around;
-    width: 50vw;
+    width: 59vw;
     height: 13vh;
     background-color: white;
     margin-top: 15px;

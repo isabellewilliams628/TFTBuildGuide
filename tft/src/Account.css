@@ -54,6 +54,13 @@
 }
 
 .FavBuilds{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 47vh;
+    width: 82vw;
+    margin-top: 20px;
+    margin-left: 20px
 }
 

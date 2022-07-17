@@ -45,7 +45,7 @@ function NavBar() {
                 <div className="Text">Login</div>
             </div>
         </Link>
-        <Link to="/register" style={{ textDecoration: 'none', color: 'inherit'  }}>
+        <Link to="/registration" style={{ textDecoration: 'none', color: 'inherit'  }}>
             <div className="Button">
                 <div className="Text">Register</div>
             </div>

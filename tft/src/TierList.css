@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EDDDFF;
+    background-color: white;
     height: 6vh;
     width: 12vw;
 }
@@ -24,3 +24,18 @@
     font-weight: bold;
 }
 
+.TypeButton:hover{
+    cursor: pointer;
+}
+
+.SelectedButton{
+    background-color: #EDDDFF;
+    border: 3px solid black;
+    border-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 12vw;
+
+}
