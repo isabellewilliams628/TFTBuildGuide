@@ -30,6 +30,22 @@ app.post('/register', (req,res)=> {
     });
 });
 
+app.post('/login', (req,res)=> {
+
+    const UserOrEmail = req.body.UserOrEmail;
+    const password = req.body.password;
+
+    con.query('SELECT * FROM users WHERE email = ? OR username = ? AND password = ?', 
+    [UserOrEmail, password],
+    (err,result) => {
+        if(err) {
+            res.send({err: err});
+        } else {
+            res.send("user logged in!");
+        }
+    });
+});
+
 app.listen(3001, () => {
     console.log("server is running!");
 });
