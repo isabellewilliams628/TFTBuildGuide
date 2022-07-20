@@ -17,7 +17,7 @@
 
 .Username{
     margin-left: 30vw;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .BottomHalf{
@@ -42,7 +42,7 @@
     align-items: center;
     justify-content: center;
     height: 6vh;
-    width: 14vw;
+    width: 20vw;
     background-color: white;
     margin-top: 20px;
     margin-left: 20px;

@@ -1,8 +1,13 @@
 .TierBox{
     display: flex;
+<<<<<<< Updated upstream
     justify-content: flex-start;
     align-items: center; 
     
+=======
+    justify-content: center;
+    align-items: center;
+>>>>>>> Stashed changes
    
 }
 

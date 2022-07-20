@@ -18,7 +18,6 @@ function App() {
       <Route path="tierlist" element={<TierList />} />
       <Route path="registration" element={<Registration />} />
       <Route path="login" element={<Login />}/>
-
       <Route path="account" element={<Account />} />
     </Routes>
     </BrowserRouter>
