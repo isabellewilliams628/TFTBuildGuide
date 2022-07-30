@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Registration.css';
 import Axios from 'axios';
 import NavBar from './NavBar';
+import Register from './assets/Register.png'
 import { Navigate, useNavigate } from "react-router-dom";
 
 function Registration(){
@@ -26,6 +27,10 @@ function Registration(){
     }
 
     return(
+        <div>
+            <NavBar />
+        <div className="Images">
+            <img src={Register} className="image"></img>
         <div className="form">
         <div className="form-body">
             <div className="email">
@@ -54,12 +59,15 @@ function Registration(){
             </div>
         </div>
         <div class="footer">
-            <button onClick={() => {
+            <button 
+            onClick={() => {
                 addUser();
                 routeChange();
             }}> 
             Sign Up</button>
         </div>
+    </div>
+    </div>
     </div>
     )
 }
