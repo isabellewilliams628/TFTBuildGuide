@@ -45,3 +45,23 @@ body{
     text-align: center;
     padding-top: 130px;
 }
+
+.image1{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 10px;
+    top: 80px;
+}
+
+.image2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 0px;
+    bottom: 0px;
+}
+.Images{
+    display: flex;
+    justify-content: center;
+}
