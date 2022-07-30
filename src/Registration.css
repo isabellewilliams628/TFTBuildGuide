@@ -1,0 +1,47 @@
+body{
+    background: #EDC8E5;  
+}
+
+.form{
+    display: auto;
+    width: 550px;
+    margin: 100px auto;
+    height: 400px; 
+    background-color: #EDDDFF;
+    align-content: center;
+    
+}
+
+.form-body{
+    display: block;
+    gap: 20px;
+    padding: 60px 20px;
+    height: 20%;
+    border: 1px white;
+
+}
+
+.form-body > *{
+    padding: 15px;
+}
+
+.form__label{
+    display: block;
+    text-align: justify;
+    width: 50%;
+    margin-left: 150px ;
+    margin-bottom: 5px;
+    font-family: Friz-Quadrata-Std-Medium;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+.form_input{
+    width: 70%;
+}
+
+.footer{
+    text-align: center;
+    padding-top: 130px;
+}
