@@ -1,4 +1,4 @@
-body{
+.body{
     background: #EDC8E5;  
 }
 
@@ -44,4 +44,16 @@ body{
 .footer{
     text-align: center;
     padding-top: 130px;
+}
+
+.image{
+    position: absolute;
+    width: 400px;
+    height: 213;
+    left: 0px;
+    top: 80px;
+}
+.Images{
+    display: flex;
+    justify-content: center;
 }
