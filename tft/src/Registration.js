@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Registration.css';
 import Axios from 'axios';
 import NavBar from './NavBar';
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Registration(){
     const [email, setEmail] = useState('');
@@ -9,7 +10,7 @@ function Registration(){
     const [password,setPassword] = useState('');
 
     const addUser = () => {
-        Axios.post('http://localhost:3001/register', {
+        Axios.post('http://localhost:4000/register', {
             email: email,
             username: username,
             password: password,
@@ -17,6 +18,12 @@ function Registration(){
             console.log("success");
         });
     };
+
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+      let path = `/login`; 
+      navigate(path);
+    }
 
     return(
         <div className="form">
@@ -47,7 +54,11 @@ function Registration(){
             </div>
         </div>
         <div class="footer">
-            <button onClick={addUser} >Sign Up</button>
+            <button onClick={() => {
+                addUser();
+                routeChange();
+            }}> 
+            Sign Up</button>
         </div>
     </div>
     )
