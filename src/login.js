@@ -2,6 +2,9 @@ import './login.css';
 import React, {useState} from 'react';
 import Axios from 'axios';
 import { Navigate, useNavigate } from "react-router-dom";
+import loginPg from './assets/loginPg.png'
+import TLogo from './assets/TLogo.png'
+import NavBar from './NavBar';
 
 function Login(){
 
@@ -43,6 +46,11 @@ function Login(){
         }
 
     return(
+            <div>
+              <NavBar />
+            <div className="Images">
+            <img src={TLogo} className="image1"></img>
+            <img src={loginPg} className="image2"></img>
             <div className="form">
                 <div className="form-body">
                     <div className="email">
@@ -72,7 +80,9 @@ function Login(){
                 {loginStatus && (
                     <button onClick={userAuthenticeted}>Check if authenticated</button>
             )}
-            </div>      
+            </div>   
+            </div>  
+            </div>
         )       
     }
     export default Login;
