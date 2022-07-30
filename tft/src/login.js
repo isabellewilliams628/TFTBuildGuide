@@ -1,21 +1,46 @@
 import './login.css';
 import React, {useState} from 'react';
 import Axios from 'axios';
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Login(){
 
     const [UserOrEmail, setUserOrEmail] = useState('');
     const [password, setPassword] = useState('');
-    //const [loginStatus, setloginStatus] = useState('');
+    const [loginStatus, setloginStatus] = useState(false);
 
+    Axios.defaults.withCredentials = true;
     const userLogin = () => {
-        Axios.post('http://localhost:3001/login', {
+        Axios.post('http://localhost:4000/login', {
             UserOrEmail: UserOrEmail,
             password: password,
+            loginStatus: loginStatus,
         }).then((response) => {
-            console.log(response);
-        });
-    };
+            if (!response.data.auth) {
+                setloginStatus(false);
+              } else {
+                console.log(response.data);
+                localStorage.setItem("token", response.data.token)
+                setloginStatus(true);
+              }
+            });
+          };
+
+          const userAuthenticeted = () => {
+            Axios.get("http://localhost:4000/isUserAuth", {
+              headers: {
+                "x-access-token": localStorage.getItem("token"),
+              },
+            }).then((response) => {
+              console.log(response);
+            }); 
+          };
+
+          let navigate = useNavigate(); 
+            const routeChange = () =>{ 
+            let path = `/Account`; 
+            navigate(path);
+        }
 
     return(
             <div className="form">
@@ -38,8 +63,15 @@ function Login(){
                     </div>
                 </div>
                 <div class="footer">
-                    <button onClick={userLogin}>Login</button>
+                <button onClick={() => {
+                userLogin();
+                routeChange();
+            }}> 
+            Log In</button>
                 </div>
+                {loginStatus && (
+                    <button onClick={userAuthenticeted}>Check if authenticated</button>
+            )}
             </div>      
         )       
     }
