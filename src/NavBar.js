@@ -1,14 +1,20 @@
 import './NavBar.css';
 import {Link} from "react-router-dom";
 import icon from "./assets/icon.png"
+import TFT_new from "./assets/TFT_new.png"
 
 function NavBar() {
     return (
       <div className="NavBar">
     
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="Button">
-                <div className="Text">Home</div>
+    <Link to="/home">
+            <div className="Logo">
+                 <img src={TFT_new} className="Logo"></img>
+            </div>
+        </Link>
+        <Link to="/account" >
+            <div className="Account">
+                <img src={icon} className="AccountIcon"></img>
             </div>
         </Link>
         <Link to="/builds" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -44,11 +50,6 @@ function NavBar() {
         <Link to="/registration" style={{ textDecoration: 'none', color: 'inherit'  }}>
             <div className="Button">
                 <div className="Text">Register</div>
-            </div>
-        </Link>
-        <Link to="/account" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <div className="Account">
-                <div className="Text">Account</div>
             </div>
         </Link>
       </div>
