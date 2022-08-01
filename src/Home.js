@@ -1,19 +1,16 @@
 import './Home.css';
-import pengu from './assets/pengu.png'
 import NavBar from './NavBar';
+import MainPage from './assets/MainPage.jpeg'
 
 function Home() {
     return (
       <div>
-        <NavBar />
-      <div className="Home">
-        <div className="HomeText">Teamfight Tactics Guide</div>
-        <div className="Images">
-        <img src={pengu} className="imageOne"></img>
-      <img className="imageTwo"></img>
-      </div>
-      </div>
-      </div>
+      <NavBar />
+      
+    <div className="MainPage">
+      <img src={MainPage} className="MainPage"></img>
+    </div>
+    </div>
     );
   }
   
