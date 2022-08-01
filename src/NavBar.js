@@ -5,11 +5,7 @@ import icon from "./assets/icon.png"
 function NavBar() {
     return (
       <div className="NavBar">
-        <Link to="/account" >
-            <div className="Account">
-                <img src={icon} className="AccountIcon"></img>
-            </div>
-        </Link>
+    
         <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="Button">
                 <div className="Text">Home</div>
@@ -48,6 +44,11 @@ function NavBar() {
         <Link to="/registration" style={{ textDecoration: 'none', color: 'inherit'  }}>
             <div className="Button">
                 <div className="Text">Register</div>
+            </div>
+        </Link>
+        <Link to="/account" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="Account">
+                <div className="Text">Account</div>
             </div>
         </Link>
       </div>
