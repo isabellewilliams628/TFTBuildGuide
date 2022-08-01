@@ -3,7 +3,7 @@
 }
 
 .form{
-    display: auto;
+    display: flex;
     width: 550px;
     margin: 100px auto;
     height: 400px; 
