@@ -1,5 +1,4 @@
 .Home{
-    background-color: #EDDDFF ;
     display: flex;
     width: 100vw;
     height: 94vh;
@@ -8,25 +7,14 @@
     
 }
 
-.HomeText{
-    display: flex;
-    font-family: Friz-Quadrata-Std-Medium;
+.MainPage{
     justify-content: center;
-    align-items: top;
-    font-size: 70px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: white;
-   
-}
-
-.imageOne{
-    margin-top: 50px;
-    width: 20vw;
-    height: 20vw;
-}
-
-.Images{
-    display: flex;
-    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+    width: 1500px;
+    height: 742px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem 6rem;
 }
