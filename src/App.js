@@ -15,7 +15,7 @@ function App() {
       <div className="gradient__bg ">
     <BrowserRouter>
     <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="items" element={<Items />} />
       <Route path="tierlist" element={<TierList />} />
       <Route path="Augments" element={<Augments />} />
