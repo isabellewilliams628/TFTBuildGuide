@@ -7,7 +7,7 @@ function NavBar() {
     return (
       <div className="NavBar">
     
-    <Link to="/home">
+    <Link to="/">
             <div className="Logo">
                  <img src={TFT_new} className="Logo"></img>
             </div>
