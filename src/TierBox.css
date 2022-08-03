@@ -19,7 +19,7 @@
     align-items: center;
     width: 6vw;
     height: 12vh;
-    background-color: #EDDDFF;
+    background-color: #DDE7FF;
     margin-top: 20px;
     font-size: 40px;
     font-family: Friz-Quadrata-Std-Medium;
@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #EDDDFF;
+    background-color: #DDE7FF;
     width: 80vw;
     height: 70vh;
     margin-right: 200px;
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: space-around;
-    width: 59vw;
+    width: 63vw;
     height: 13vh;
     background-color: white;
     margin-top: 15px;

@@ -22,7 +22,6 @@
 
 .BottomHalf{
     display: flex;
-    background-color: #EDDDFF;
     width: 100%;
     height: 70vh;
 }
