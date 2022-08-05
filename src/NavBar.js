@@ -32,11 +32,6 @@ function NavBar() {
                 <div className="Text">Augments</div>
             </div>
         </Link>
-        <Link to="/tierlist" style={{ textDecoration: 'none', color: 'inherit'  }}>
-            <div className="Button">
-                <div className="Text">Tier List</div>
-            </div>
-         </Link>
          <Link to="/feedback" style={{ textDecoration: 'none', color: 'inherit'  }}>
             <div className="Button">
                 <div className="Text">Feedback</div>

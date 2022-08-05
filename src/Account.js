@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './NavBar';
 import './Account.css'
+import react, { useEffect, useState } from 'react';
 import profile from './assets/profile.png'
 
 function Account() {
@@ -15,7 +16,7 @@ function Account() {
           </div>
           </div>
           <div className="RightHalf">
-          <div className="Username">Welcome username!</div>
+          <div className="Username">Welcome</div>
           </div>
         </div>
         <div className="BottomHalf">

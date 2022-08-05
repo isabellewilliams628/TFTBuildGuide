@@ -11,11 +11,10 @@ import pic5 from './assets/s5.png'
 
 function TierBox(props){
 
-    let champs = [pic1, pic2, pic3, pic4, pic5]
-    //let  = [pic6, pic7, pic8, pic9, pic10]
+    let champs = [[pic1, pic2, pic3, pic4, pic5][pic3]]
 
     return(
-    <div className="TierBox">
+            <div className="TierBox">
                 <div className="TierLevels">
                     <div className="Level">S</div>
                     <div className="Level">A</div>
@@ -36,7 +35,7 @@ function TierBox(props){
                     <div className="RankList"></div>
                     <div className="RankList"></div>
                 </div>
-            </div>
+            </div> 
     );
 }
 

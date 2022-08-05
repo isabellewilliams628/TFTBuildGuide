@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import NavBar from './NavBar.js'
 import TierBox from './TierBox.js'
+import TierImages from './TierImages.js'
 import './TierList.css'
 
-function TierList() {
-   
+function TierList(){
     const [buttonSelect, setButtonSelect] = useState(0);
-    const comps=["sc1", "sc2", "sc3", "sc4", "sc5", "sc6"]
-    const champs=["Karma"]
-    const items=["Recurve Bow"]
-    const augments=["Revel Crown"]
-    
+    const comps=[["sc1", "sc2", "sc3", "sc4", "sc5", "sc6"]["sc3"]]
+    const champs=[]
+    const items=[]
+    const augments=[]
+
     return(
         <div className="TierList">
             <NavBar />
@@ -33,7 +33,6 @@ function TierList() {
             
         </div>
     );
+ }
 
-}
-
-export default TierList
+ export default TierList;

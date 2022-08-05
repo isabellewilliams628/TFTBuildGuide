@@ -1,3 +1,4 @@
+
 .Home{
     display: flex;
     width: 100vw;
@@ -5,15 +6,98 @@
     justify-content: center;
     flex-direction: column;
     
+    
 }
 
-.MainPage{
-    justify-content: center;
+.HomePage{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 1200px;
-    height: 742px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 2rem 6rem;
+    background-color:#ECDCEE;
+
 }
+
+.mainImage{
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    background-image: url("./assets/MainPage.jpeg");
+    opacity: 0.8;
+    margin-top: 30px;
+    background-position: 50% 35%;
+    width: 85vw;
+    height: 40vh;
+    border-radius: 83px;
+    text-align: left;
+}
+
+.imageText{
+    font-family: Inter;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    width: 30vw;
+    font-size: 45px;
+
+}
+
+.BottomHalf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 40vh;
+}
+
+
+.Block{
+    background-color: #EDC8E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 35vh;
+    width: 24vw;
+    margin-top: 20px;
+    border-radius: 59px;
+}
+
+.pengu1{
+    margin-top: 5px;
+    height: 20vh;
+    width: 10vw;
+}
+
+.pengu2{
+    margin-top: 5px;
+    height: 20vh;
+    width: 10vw;
+}
+
+.pengu3{
+    margin-top: 5px;
+    height: 20vh;
+    width: 10vw;
+}
+
+.BlockHeader{
+    font-family: Inter;
+    font-size: 23px;
+}
+
+.BlockText{
+    font-family: Inter;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    width: 15vw;
+}
+
+
+.Disclaimer{
+    height: 7vh;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    width: 80vw;
+}
+
+
