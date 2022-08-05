@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './Home.js';
 import Account from './Account.js'
+import Builds  from './Builds';
 import Items from './Items.js'
 import Registration from './Registration.js';
 import Login from './login.js'
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="items" element={<Items />} />
+      <Route path="builds" element={<Builds />} />
       <Route path="Augments" element={<Augments />} />
       <Route path="registration" element={<Registration />} />
       <Route path="login" element={<Login />}/>
