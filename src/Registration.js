@@ -27,11 +27,11 @@ function Registration(){
     }
 
     return(
-        <div>
-            <NavBar />
-        <div className="Images">
-            <img src={Register} className="image"></img>
-        <div className="form">
+                <div>
+        <NavBar />
+    <div className="Images">
+        <img src={Register} className="image"></img>
+    <div className="form" >
         <div className="form-body">
             <div className="email">
                 <label className="form__label" for="email">Email: </label>
@@ -55,20 +55,18 @@ function Registration(){
                 onChange={(e) => {
                     setPassword(e.target.value);
                     }} 
-                    placeholder="Password"/>
-            </div>
+                    placeholder="*******"/>
+                    <div></div>
+                <button onClick={() => {
+                    addUser();
+                    redirect();
+                }}> Sign Up</button>
+                <div></div>
         </div>
-        <div class="footer">
-            <button 
-            onClick={() => {
-                addUser();
-                routeChange();
-            }}> 
-            Sign Up</button>
         </div>
-    </div>
-    </div>
-    </div>
+</div>
+</div>
+</div>
     )
 }
 
