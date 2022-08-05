@@ -1,0 +1,45 @@
+.head {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 36px;
+  font-family: Inter;
+  color: #ffffff;
+}
+
+.sub {
+  padding-bottom: 40px;
+  font-style: italic;
+  font-weight: 600;
+}
+.builds-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.parent {
+  border: 1px solid;
+  margin: 1 rem;
+  padding: 2 rem 2 rem;
+  text-align: center;
+
+}
+.builds {
+  display: inline-block;
+  border: 1px solid;
+  padding: 1 rem 1 rem;
+  vertical-align: middle;
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+
+.builds-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+
+
