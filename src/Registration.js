@@ -21,7 +21,7 @@ function Registration(){
     };
 
     let navigate = useNavigate(); 
-    const routeChange = () =>{ 
+    const redirect = () =>{ 
       let path = `/login`; 
       navigate(path);
     }
