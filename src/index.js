@@ -5,6 +5,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home.js'
+import WebFont from "webfontloader";
+
+WebFont.load({
+  google: {
+      families: ['Poppins', "Inter:600,500,700"]
+  }
+});
+  
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
