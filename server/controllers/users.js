@@ -1,4 +1,5 @@
 import users from "../models/users.js";
+import userFeedback from "../models/userFeedback.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
  
@@ -87,4 +88,17 @@ export const Logout = async(req, res) => {
     });
     res.clearCookie('refreshToken');
     return res.sendStatus(200);
+}
+
+export const feedback = async(req, res) => {
+    const {email, feedback} = req.body;
+    try {
+        await userFeedback.create({
+            email: email,
+            feedback: feedback
+        });
+        res.json({msg: "Feedback added to database"});
+    } catch (error) {
+        console.log(error);
+    }
 }
