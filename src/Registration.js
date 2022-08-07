@@ -1,83 +1,77 @@
-import './Registration.css';
-import axios from 'axios';
+import './login.css';
 import React, {useState} from 'react';
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import loginPg from './assets/loginPg.png'
+import TLogo from './assets/TLogo.png'
 import NavBar from './NavBar.js';
-import Register from './assets/Register.png';
-import { isEmail } from "validator";
 
-const Registration = () => {
+const Login = () => {
 
-    const [email, setEmail] = useState('');
-    const [username, setUsername] = useState('');
+    const [UserOrEmail, setUserOrEmail] = useState('');
     const [password, setPassword] = useState('');
     const history = useNavigate();
+    const [msg, setMsg] = useState('');
 
-    const addUser = async (e) => {
-        e.preventDefault();
-        try {
-            await axios.post('http://localhost:4000/users', {
-                username: username,
-                email: email,
-                password: password
-            });
-
-            history.push("/");
-        } 
-        catch (error) {
-            if (error.response) {
-                setMsg(error.response.data.msg);
-            }
+    const userLogin = async (creds) => {
+      creds.preventDefault();
+      try {
+        await axios.get('http://localhost:4000/login', {
+            email: email,
+            password: password
+        });
+        history.push("/account");
+    } catch (error) {
+        if (error.response) {
+            setMsg(error.response.data.msg);
+            
+        } else {
+            console.log({UserOrEmail}, "logged in")
         }
     }
-    let navigate = useNavigate(); 
-    const redirect = () =>{ 
-      let path = `/login`; 
-      navigate(path);
-    }
-
+    localStorage.setItem('UserOrEmail', response.data)
+    console.log(response.data)
+  };
+          let navigate = useNavigate(); 
+            const redirect = () =>{ 
+            let path = `/Account`; 
+            navigate(path);
+        }
     return(
-        <div>
-            <NavBar />
-        <div className="Images">
-            <img src={Register} className="image"></img>
-        <div className="form" >
-            <div className="form-body">
-                <div className="email">
-                    <label className="form__label" for="email">Email: </label>
-                    <input  type="email"
-                    onChange={(e) => {
-                        setEmail(e.target.value);
-                        }} 
-                        placeholder="Email"/>
-                </div>
-                <div className="username">
-                    <label className="form__label" for="username">Username: </label>
-                    <input className="form__input" type="text"            
-                    onChange={(e) => {
-                        setUsername(e.target.value);
-                        }}  
-                        placeholder="Username"/>
-                </div>
-                <div className="password">
-                    <label className="form__label" for="password">Password: </label>
-                    <input className="form__input" type="password"                 
-                    onChange={(e) => {
-                        setPassword(e.target.value);
-                        }} 
+            <div>
+              <NavBar />
+            <div className="Images">
+            <img src={TLogo} className="image1"></img>
+            <img src={loginPg} className="image2"></img>
+            <div className="form">
+                <div className="form-body">
+                    <div className="email">
+                        <label className="form__label" for="email">E-mail/Username: </label>
+                        <input  type="text" className="form__input" value = {UserOrEmail}
+                        onChange={(e) => {
+                            setUserOrEmail(e.target.value);
+                            }} 
+                            placeholder="E-mail/Username"/>
+                    </div>
+                    <div className="password">
+                        <label className="form__label" for="password">Password: </label>
+                        <input className="form__input" type="password" value = {password}
+                        onChange={(e) => {
+                            setPassword(e.target.value);
+                            }} 
                         placeholder="*******"/>
-                        <div></div>
-                    <button onClick={(e) => {
-                        addUser(e);
-                        //redirect();
-                    }}> Sign Up</button>
-                    
+                    </div>
+                </div>
+                <div class="footer">
+                <button onClick={(creds) => {
+                userLogin(creds);
+                redirect();
+            }}> 
+            Log In</button>
+                </div>
+            </div>   
+            </div>  
             </div>
-            </div>
-    </div>
-    </div>
-    </div>
-    )
-
-};
-export default Registration;
+        )       
+    }
+    export default Login;
