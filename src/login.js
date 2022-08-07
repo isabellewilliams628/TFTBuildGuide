@@ -1,50 +1,42 @@
 import './login.css';
 import React, {useState} from 'react';
-import Axios from 'axios';
-import { Navigate, useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import loginPg from './assets/loginPg.png'
 import TLogo from './assets/TLogo.png'
-import NavBar from './NavBar';
+import NavBar from './NavBar.js';
 
-function Login(){
+const Login = () => {
 
     const [UserOrEmail, setUserOrEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loginStatus, setloginStatus] = useState(false);
+    const history = useNavigate();
+    const [msg, setMsg] = useState('');
 
-    Axios.defaults.withCredentials = true;
-    const userLogin = () => {
-        Axios.post('http://localhost:4000/login', {
-            UserOrEmail: UserOrEmail,
-            password: password,
-            loginStatus: loginStatus,
-        }).then((response) => {
-            if (!response.data.auth) {
-                setloginStatus(false);
-              } else {
-                console.log(response.data);
-                localStorage.setItem("token", response.data.token)
-                setloginStatus(true);
-              }
-            });
-          };
-
-          const userAuthenticeted = () => {
-            Axios.get("http://localhost:4000/isUserAuth", {
-              headers: {
-                "x-access-token": localStorage.getItem("token"),
-              },
-            }).then((response) => {
-              console.log(response);
-            }); 
-          };
-
+    const userLogin = async (creds) => {
+      creds.preventDefault();
+      try {
+        await axios.get('http://localhost:4000/login', {
+            email: email,
+            password: password
+        });
+        history.push("/account");
+    } catch (error) {
+        if (error.response) {
+            setMsg(error.response.data.msg);
+            
+        } else {
+            console.log({UserOrEmail}, "logged in")
+        }
+    }
+    localStorage.setItem('UserOrEmail', response.data)
+    console.log(response.data)
+  };
           let navigate = useNavigate(); 
-            const routeChange = () =>{ 
+            const redirect = () =>{ 
             let path = `/Account`; 
             navigate(path);
         }
-
     return(
             <div>
               <NavBar />
@@ -55,7 +47,7 @@ function Login(){
                 <div className="form-body">
                     <div className="email">
                         <label className="form__label" for="email">E-mail/Username: </label>
-                        <input  type="email" id="email" className="form__input" 
+                        <input  type="text" className="form__input" value = {UserOrEmail}
                         onChange={(e) => {
                             setUserOrEmail(e.target.value);
                             }} 
@@ -63,23 +55,20 @@ function Login(){
                     </div>
                     <div className="password">
                         <label className="form__label" for="password">Password: </label>
-                        <input className="form__input" type="password" 
+                        <input className="form__input" type="password" value = {password}
                         onChange={(e) => {
                             setPassword(e.target.value);
                             }} 
-                        placeholder="Password"/>
+                        placeholder="*******"/>
                     </div>
                 </div>
                 <div class="footer">
-                <button onClick={() => {
-                userLogin();
-                routeChange();
+                <button onClick={(creds) => {
+                userLogin(creds);
+                redirect();
             }}> 
             Log In</button>
                 </div>
-                {loginStatus && (
-                    <button onClick={userAuthenticeted}>Check if authenticated</button>
-            )}
             </div>   
             </div>  
             </div>
