@@ -2,7 +2,8 @@ import './App.css';
 import Home from './Home.js';
 import Account from './Account.js'
 import Builds  from './Builds';
-import Items from './Items.js'
+import Items from './Items.js';
+import Feedback from './Feedback.js';
 import Registration from './Registration.js';
 import Login from './login.js'
 import Augments from './Augments';
@@ -19,6 +20,7 @@ function App() {
       <Route path="items" element={<Items />} />
       <Route path="builds" element={<Builds />} />
       <Route path="Augments" element={<Augments />} />
+      <Route path="Feedback" element={<Feedback />} />
       <Route path="registration" element={<Registration />} />
       <Route path="login" element={<Login />}/>
       <Route path="account" element={<Account />} />
