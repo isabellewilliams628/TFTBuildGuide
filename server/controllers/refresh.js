@@ -1,7 +1,7 @@
 import users from '../models/users.js'
 import jwt from "jsonwebtoken";
  
-export const refreshToken = async(req, res) => {
+const refreshToken = async(req, res) => {
  
     try {
         const refreshToken = req.cookies.refreshToken;
@@ -34,3 +34,5 @@ export const refreshToken = async(req, res) => {
         console.log(error);
     }
 }
+ 
+export default refreshToken;
