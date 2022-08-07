@@ -67,19 +67,25 @@ import {Jinx} from "./BuildComps/Jinx.js"
   < Guild />
     </div>
 
+<div></div>
+
   <div className="Builds">
    < Mystic />
      </div>
 
+<div></div>
 
    <div className="Builds">
     < Shimmer />               
        </div>
 
+<div></div>
 
     <div className="Builds">
       < Daeja />          
         </div>
+
+<div></div>
       
       <div className="Builds">
         < Jinx />
