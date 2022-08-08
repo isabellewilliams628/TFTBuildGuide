@@ -38,12 +38,15 @@ const Login = (req,response) => {
             navigate(path);
         }
     return(
-            <div>
+                       <div>
               <NavBar />
             <div className="Images">
             <img src={TLogo} className="image1"></img>
             <img src={loginPg} className="image2"></img>
             <div className="form">
+            <div className='text'>
+            <label> Sign In </label>
+            </div>
                 <div className="form-body">
                     <div className="email">
                         <label className="form__label" for="email">E-mail/Username: </label>
@@ -54,24 +57,24 @@ const Login = (req,response) => {
                             placeholder="E-mail/Username"/>
                     </div>
                     <div className="password">
-                        <label className="form__label" for="password">Password: </label>
-                        <input className="form__input" type="password" value = {password}
-                        onChange={(e) => {
-                            setPassword(e.target.value);
-                            }} 
+                    <label className="form__label" for="password">Password: </label>
+                    <input className="form__input" type="password" value={password}         
+                    onChange={(e) => {
+                        setPassword(e.target.value);
+                        }} 
                         placeholder="*******"/>
+                        <div>
+                    <button className='button'
+                    onClick={(creds) => {
+                        userLogin(creds);
+                        redirect();
+                    }}> Sign In</button>
                     </div>
-                </div>
-                <div class="footer">
-                <button onClick={(creds) => {
-                userLogin(creds);
-                redirect();
-            }}> 
-            Log In</button>
-                </div>
+            </div>
+            </div>
             </div>   
             </div>  
             </div>
-        )       
+        ) 
     }
     export default Login;
