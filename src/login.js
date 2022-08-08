@@ -17,7 +17,7 @@ const Login = () => {
       creds.preventDefault();
       try {
         await axios.get('http://localhost:4000/login', {
-            email: email,
+            UserOrEmail: UserOrEmail,
             password: password
         });
         history.push("/account");
