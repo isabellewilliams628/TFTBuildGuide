@@ -16,7 +16,7 @@ const Login = (req,response) => {
     const userLogin = async (creds) => {
       creds.preventDefault();
       try {
-        await axios.get('http://localhost:4000/login', {
+        await axios.get('https://team-tight-tactics-db.herokuapp.com/login', {
             UserOrEmail: UserOrEmail,
             password: password
         });
