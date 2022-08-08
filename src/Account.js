@@ -16,7 +16,7 @@ function Account() {
           </div>
           </div>
           <div className="RightHalf">
-          <div className="Username">Welcome</div>
+          <div className="Username">Welcome!</div>
           </div>
         </div>
         <div className="BottomHalf">

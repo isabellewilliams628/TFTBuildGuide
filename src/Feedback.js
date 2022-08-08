@@ -5,6 +5,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import NavBar from './NavBar';
 import './Feedback.css'
+import axios from 'axios';
 
 function Feedback() {
   const formInitialDetails = {
@@ -28,7 +29,7 @@ function Feedback() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch('http://localhost:4000/feedback', {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
