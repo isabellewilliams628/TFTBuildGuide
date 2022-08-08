@@ -29,7 +29,7 @@ function Feedback() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch('http://localhost:4000/feedback', {
+    let response = await fetch('https://team-tight-tactics-db.herokuapp.com/feedback', {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
