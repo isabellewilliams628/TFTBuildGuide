@@ -5,13 +5,11 @@ import { useNavigate } from "react-router-dom";
 import NavBar from './NavBar.js';
 import Register from './assets/Register.png';
 
-
 const Registration = () => {
 
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [msg, setMsg] = useState('');
     const history = useNavigate();
 
     const addUser = async (e) => {
@@ -54,7 +52,7 @@ const Registration = () => {
                 </div>
                 <div className="username">
                     <label className="form__label" for="username">Username: </label>
-                    <input className="form__input" type="text" value={username}        
+                    <input className="form__input" type="text"   value = {username}         
                     onChange={(e) => {
                         setUsername(e.target.value);
                         }}  
@@ -62,7 +60,7 @@ const Registration = () => {
                 </div>
                 <div className="password">
                     <label className="form__label" for="password">Password: </label>
-                    <input className="form__input" type="password"  value={password}                 
+                    <input className="form__input" type="password" value={password}         
                     onChange={(e) => {
                         setPassword(e.target.value);
                         }} 
