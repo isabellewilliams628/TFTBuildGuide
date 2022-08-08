@@ -4,54 +4,14 @@ import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import NavBar from './NavBar.js';
 import Register from './assets/Register.png';
-/*import { isEmail } from "validator";
 
 
-const required = (value) => {
-    if (!value) {
-      return (
-        <div className="invalid-feedback d-block">
-          All fields required!
-        </div>
-      );
-    }
-  };
-  
-  const validEmail = (value) => {
-    if (!isEmail(value)) {
-      return (
-        <div className="invalid-feedback d-block">
-          Please enter a valid email.
-        </div>
-      );
-    }
-  };
-  
-  const vusername = (value) => {
-    if (value.length < 3 || value.length > 20) {
-      return (
-        <div className="invalid-feedback d-block">
-          The username must be between 3 and 20 characters.
-        </div>
-      );
-    }
-  };
-  
-  const vpassword = (value) => {
-    if (value.length < 6 || value.length > 40) {
-      return (
-        <div className="invalid-feedback d-block">
-          The password must be between 6 and 40 characters.
-        </div>
-      );
-    }
-  };
-*/
 const Registration = () => {
 
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [msg, setMsg] = useState('');
     const history = useNavigate();
 
     const addUser = async (e) => {
@@ -86,7 +46,7 @@ const Registration = () => {
             <div className="form-body">
                 <div className="email">
                     <label className="form__label" for="email">Email: </label>
-                    <input  type="email"
+                    <input  type="email" value={email}
                     onChange={(e) => {
                         setEmail(e.target.value);
                         }} 
@@ -94,7 +54,7 @@ const Registration = () => {
                 </div>
                 <div className="username">
                     <label className="form__label" for="username">Username: </label>
-                    <input className="form__input" type="text"            
+                    <input className="form__input" type="text" value={username}        
                     onChange={(e) => {
                         setUsername(e.target.value);
                         }}  
@@ -102,7 +62,7 @@ const Registration = () => {
                 </div>
                 <div className="password">
                     <label className="form__label" for="password">Password: </label>
-                    <input className="form__input" type="password"                 
+                    <input className="form__input" type="password"  value={password}                 
                     onChange={(e) => {
                         setPassword(e.target.value);
                         }} 
