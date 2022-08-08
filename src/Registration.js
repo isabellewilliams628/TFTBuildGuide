@@ -10,6 +10,7 @@ const Registration = () => {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [msg, setMsg] = useState('');
     const history = useNavigate();
 
     const addUser = async (e) => {
