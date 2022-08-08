@@ -35,6 +35,7 @@ const Registration = () => {
         });
         let result = await response.json();
         setUserInfo(initialVals);
+          history.push("/");
         if (result.code == 200) {
           setStatus({ succes: true, message: 'Message sent successfully' });
         } else {
