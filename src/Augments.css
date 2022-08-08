@@ -1,8 +1,14 @@
 table {
-    border: 2px solid rgb(136, 222, 243);
-    width: 90%;
-    position: absolute; top: 100px; left: 100px; background-color: rgb(241, 227, 240);
-  }
+  border: 2px solid rgb(63, 63, 63);
+  width: 90%;
+  position: absolute; top: 100px; left: 100px; background-color: aliceblue;
+}
+    
+.Augments {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
     
   th {
     border-bottom: 1px solid black; 
