@@ -61,6 +61,10 @@ a {
 
    /* global 94%+ browsers support */
    background:linear-gradient(90deg, rgba(49, 64, 84, 1) 0%, rgba(132, 155, 214, 1) 50%, rgba(232, 220, 226, 1) 100%);
+	
+height: 100%;
+  width: 100%;
+  background-attachment: fixed;
 }
 
 .gradient__text {
