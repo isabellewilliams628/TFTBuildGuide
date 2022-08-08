@@ -9,7 +9,7 @@
     height: 400px; 
     background-color: #EDDDFF;
     align-content: center;
-    
+    border-radius: 15px;
 }
 
 .form-body{
@@ -31,7 +31,7 @@
     width: 50%;
     margin-left: 150px ;
     margin-bottom: 5px;
-    font-family: Friz-Quadrata-Std-Medium;
+    font-family: Inter;
     font-size: large;
     font-weight: bold;
     
@@ -39,11 +39,6 @@
 
 .form_input{
     width: 70%;
-}
-
-.footer{
-    text-align: center;
-    padding-top: 130px;
 }
 
 .image{
@@ -56,4 +51,24 @@
 .Images{
     display: flex;
     justify-content: center;
+}
+.text{
+    font-family: Inter;
+    justify-content: center;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+
+}
+.button{
+    justify-content: center;
+    background-color: #f0c369;
+    font-family: Inter;
+    border: #f0c369;
+    font-size: medium;
+    font-weight: bold;
+    position: absolute;
+    width: 100px;
+    left: 1225px;
+    top: 530px;
 }

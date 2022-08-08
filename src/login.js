@@ -6,7 +6,7 @@ import loginPg from './assets/loginPg.png'
 import TLogo from './assets/TLogo.png'
 import NavBar from './NavBar.js';
 
-const Login = () => {
+const Login = (req,response) => {
 
     const [UserOrEmail, setUserOrEmail] = useState('');
     const [password, setPassword] = useState('');
