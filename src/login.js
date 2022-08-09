@@ -1,6 +1,5 @@
 import './login.css';
-import React, {useState} from 'react';
-import axios from 'axios';
+import React, {useState, useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import loginPg from './assets/loginPg.png'
 import TLogo from './assets/TLogo.png'
@@ -8,73 +7,77 @@ import NavBar from './NavBar.js';
 
 const Login = (req,response) => {
 
-    const [UserOrEmail, setUserOrEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const history = useNavigate();
-    const [msg, setMsg] = useState('');
+    const initialVals = {
+        UserOrEmail: '',
+        password: ''
+      };
+
+    const [userInfo, setUserInfo] = useState(initialVals);
+    
+    const [status, setStatus] = useState();
+
+    const onFormUpdate = (category, value) => {
+        setUserInfo({
+          ...userInfo,
+          [category]: value
+        });
+      };
 
     const userLogin = async (creds) => {
-      creds.preventDefault();
-      try {
-        await axios.get('https://team-tight-tactics-db.herokuapp.com/login', {
-            UserOrEmail: UserOrEmail,
-            password: password
-        });
-        history.push("/account");
-    } catch (error) {
-        if (error.response) {
-            setMsg(error.response.data.msg);
-            
-        } else {
-            console.log({UserOrEmail}, "logged in")
-        }
-    }
-    localStorage.setItem('UserOrEmail', response.data)
-    console.log(response.data)
+        creds.preventDefault();
+
+        response = await fetch("https://team-tight-tactics-db.herokuapp.com/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(userInfo),
+      });
+      let result = await response.json();
+      setUserInfo(initialVals);
+        
+      if (result.code == 200) {
+        setStatus({ succes: true, message: 'Message sent successfully' });
+      } else {
+        setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
+      }
+
   };
           let navigate = useNavigate(); 
             const redirect = () =>{ 
             let path = `/Account`; 
             navigate(path);
         }
+        sessionStorage.setItem('user', JSON.stringify(userInfo.UserOrEmail));
     return(
-                       <div>
-              <NavBar />
-            <div className="Images">
-            <img src={TLogo} className="image1"></img>
-            <img src={loginPg} className="image2"></img>
-            <div className="form">
-            <div className='text'>
-            <label> Sign In </label>
-            </div>
-                <div className="form-body">
-                    <div className="email">
-                        <label className="form__label" for="email">E-mail/Username: </label>
-                        <input  type="text" className="form__input" value = {UserOrEmail}
-                        onChange={(e) => {
-                            setUserOrEmail(e.target.value);
-                            }} 
-                            placeholder="E-mail/Username"/>
-                    </div>
-                    <div className="password">
-                    <label className="form__label" for="password">Password: </label>
-                    <input className="form__input" type="password" value={password}         
-                    onChange={(e) => {
-                        setPassword(e.target.value);
-                        }} 
-                        placeholder="*******"/>
-                        <div>
-                    <button className='button'
-                    onClick={(creds) => {
-                        userLogin(creds);
-                        redirect();
-                    }}> Sign In</button>
-                    </div>
-            </div>
-            </div>
-            </div>   
-            </div>  
-            </div>
-        ) 
-    }
+        <div>
+        <NavBar />
+      <div className="Images">
+      <img src={TLogo} className="image1"></img>
+      <img src={loginPg} className="image2"></img>
+      <div className="form">
+      <div className='text'>
+      <label> Sign In </label>
+      </div>
+          <form onSubmit={userLogin} className="form-body">
+              <div className="email">
+                  <label className="form__label" >E-mail/Username: </label>
+                  <input className="form__input" type="text" value={userInfo.UserOrEmail} placeholder="Email/Username:" onChange={(e) => onFormUpdate('UserOrEmail', e.target.value)} /> 
+              </div>
+              <div className="password">
+              <label className="form__label" >Password: </label>
+              <input className="form__input" type="password" value={userInfo.password} placeholder="Password:" onChange={(e) => onFormUpdate('password', e.target.value)} />
+                  <div>
+              <button type="button" className='button'
+              onClick={() => {
+                  redirect();
+              }}> Sign In</button>
+              </div>
+      </div>
+      </form>
+      </div>   
+      </div>  
+      </div>
+    )
+}
     export default Login;
