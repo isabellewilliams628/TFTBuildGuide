@@ -25,7 +25,7 @@ const Registration = () => {
 
     const addUser = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:3000/users', {
+        await axios.post('https://team-tight-tactics-db.herokuapp.com/users', {
                 email: email,
                 username: username,
                 password: password
