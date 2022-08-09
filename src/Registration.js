@@ -1,5 +1,4 @@
 import './Registration.css';
-import axios from 'axios';
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import NavBar from './NavBar.js';
@@ -14,6 +13,7 @@ const Registration = () => {
       };
 
     const [userInfo, setUserInfo] = useState(initialVals);
+    const [status, setStatus] = useState();
     const history = useNavigate();
 
     const onFormUpdate = (category, value) => {
@@ -23,16 +23,24 @@ const Registration = () => {
         });
       };
 
-    const addUser = async (e) => {
+      const addUser = async (e) => {
         e.preventDefault();
-        await axios.post('https://team-tight-tactics-db.herokuapp.com/users', {
-                email: email,
-                username: username,
-                password: password
-            });
-            setUserInfo(initialVals);
-            history.push("/");
-        } 
+
+        let response = await fetch("https://team-tight-tactics-db.herokuapp.com/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(userInfo),
+        });
+        let result = await response.json();
+        setUserInfo(initialVals);
+        if (result.code == 200) {
+          setStatus({ succes: true, message: 'Message sent successfully' });
+        } else {
+          setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
+        }
+      };
     let navigate = useNavigate(); 
     const redirect = () =>{ 
       let path = `/login`; 
@@ -49,7 +57,7 @@ const Registration = () => {
                 <div className='text'>
                     <label> Sign Up </label>
                 </div>
-                    <form onSubmit={addUser} className="form-body">
+                    <form className="form-body">
                         <div className="email">
                             <label className="form__label" >Email: </label>
                             <input  type="email" value={userInfo.email} placeholder="Email:" onChange={(e) => onFormUpdate('email', e.target.value)} />
@@ -60,12 +68,13 @@ const Registration = () => {
                         </div>
                         <div className="password">
                             <label className="form__label" >Password: </label>
-                            <input className="form__input" type="password" vvalue={userInfo.password} placeholder="Password:" onChange={(e) => onFormUpdate('password', e.target.value)} />       
+                            <input className="form__input" type="password" value={userInfo.password} placeholder="Password:" onChange={(e) => onFormUpdate('password', e.target.value)} />       
                         </div>
                         <div>
-                            <button type="submit" className='button'
-                                onClick={() => {
-                                    addUser();
+                            <button type="button" className='button'
+                                onClick={(e) => {
+                                    addUser(e);
+                                    redirect();
                             }}> Sign Up</button>
                         </div>
                     </form>
